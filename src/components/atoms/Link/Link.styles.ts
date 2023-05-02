@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'theme/mediaQueries';
 import pxToRem from 'theme/pxToRem';
+import { Link } from 'gatsby';
 
-interface StyledButtonProps {
-  primary: boolean;
+interface StyledLinkProps {
+  primary?: boolean;
 }
 
-export const StyledButton = styled.button<StyledButtonProps>`
+export const StyledInternalLink = styled(Link)<StyledLinkProps>`
   width: ${pxToRem(120)};
   height: ${pxToRem(30)};
   border-radius: ${pxToRem(20)};
   font-size: ${pxToRem(12)};
   text-transform: uppercase;
+  text-decoration: none;
+  padding: ${pxToRem(4)} ${pxToRem(10)};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border: ${({ theme, primary }) => {
     if (primary) return 'none';
@@ -43,3 +49,5 @@ export const StyledButton = styled.button<StyledButtonProps>`
     `};
   }
 `;
+
+export const StyledExternalLink = styled.a``;

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
-import Button from 'src/components/atoms/Button/Button';
+import { InternalLink, ExternalLink } from 'components/atoms/Link';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Button primary={true} />
-      <Button primary={false} />
+      <InternalLink primary={true} text="resume" to="/" />
+      <ExternalLink text="resume" href="/" />
     </>
   );
 };
