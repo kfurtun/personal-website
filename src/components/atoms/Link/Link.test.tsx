@@ -1,22 +1,31 @@
 import React from 'react';
 import { render, fireEvent } from 'utils/test-utils';
 import { InternalLink, ExternalLink } from 'components/atoms/Link';
+import { screen } from 'utils/test-utils';
 
 const text = 'test';
 
 //TODO
-describe('Links', () => {
-  // it('should render a link with the correct URL', () => {
-  //   const { getByRole } = render(
-  //     <Link url="https://www.kutayfurtun.com" text={text} />
-  //   );
-  //   const link = getByRole('link');
-  //   fireEvent.click(link);
-  //   expect(window.location.href).toBe('https://www.kutayfurtun.com');
-  // });
-  // it('should have the correct text content', () => {
-  //   const { getByText } = render(<Link url="#" text={text} />);
-  //   const linkText = getByText('test');
-  //   expect(linkText).toBeInTheDocument();
-  // });
+describe('Internal link', () => {
+  it('renders the correct link', () => {
+    const { getByRole } = render(<InternalLink to="/projects" text={text} />);
+    const link = getByRole('link');
+    expect(link).toHaveAttribute('href', '/projects');
+  });
+
+  it('should have the correct text content', () => {
+    const { getByText } = render(<InternalLink to="#" text={text} />);
+    const linkText = getByText(text);
+    expect(linkText).toBeInTheDocument();
+  });
+});
+
+describe('External link', () => {
+  it('renders the correct link', () => {
+    const { getByRole } = render(
+      <ExternalLink href="https://www.kutayfurtun.com" text={text} />
+    );
+    const link = getByRole('link');
+    expect(link).toHaveAttribute('href', 'https://www.kutayfurtun.com');
+  });
 });
