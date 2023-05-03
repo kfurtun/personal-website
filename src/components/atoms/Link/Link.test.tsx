@@ -1,11 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from 'utils/test-utils';
+import { render } from 'utils/test-utils';
 import { InternalLink, ExternalLink } from 'components/atoms/Link';
-import { screen } from 'utils/test-utils';
 
 const text = 'test';
 
-//TODO
 describe('Internal link', () => {
   it('renders the correct link', () => {
     const { getByRole } = render(<InternalLink to="/projects" text={text} />);
@@ -27,5 +25,11 @@ describe('External link', () => {
     );
     const link = getByRole('link');
     expect(link).toHaveAttribute('href', 'https://www.kutayfurtun.com');
+  });
+
+  it('should have the correct text content', () => {
+    const { getByText } = render(<ExternalLink href="#" text={text} />);
+    const linkText = getByText(text);
+    expect(linkText).toBeInTheDocument();
   });
 });
