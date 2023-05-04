@@ -59,6 +59,7 @@ const config: GatsbyConfig = {
         organisms: `${__dirname}/src/components/organisms`,
       },
     },
+    `gatsby-plugin-fontawesome-css`,
   ],
 };
 

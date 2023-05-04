@@ -21,14 +21,14 @@ describe('Internal link', () => {
 describe('External link', () => {
   it('renders the correct link', () => {
     const { getByRole } = render(
-      <ExternalLink href="https://www.kutayfurtun.com" text={text} />
+      <ExternalLink href="https://www.kutayfurtun.com">{text}</ExternalLink>
     );
     const link = getByRole('link');
     expect(link).toHaveAttribute('href', 'https://www.kutayfurtun.com');
   });
 
   it('should have the correct text content', () => {
-    const { getByText } = render(<ExternalLink href="#" text={text} />);
+    const { getByText } = render(<ExternalLink href="#">{text}</ExternalLink>);
     const linkText = getByText(text);
     expect(linkText).toBeInTheDocument();
   });

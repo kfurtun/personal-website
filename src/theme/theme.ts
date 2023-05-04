@@ -12,6 +12,7 @@ const theme: Theme = {
     h2: 36,
     h3: 24,
     p: 16,
+    icon: 20,
   },
 };
 

@@ -1,6 +1,8 @@
+import React from 'react';
+
 export interface ExternalLinkProps {
-  text: string;
   href: string;
+  children: React.ReactNode;
 }
 export interface InternalLinkProps {
   text: string;
