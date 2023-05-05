@@ -35,10 +35,10 @@
       "src/*": ["*"],
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
-      "modelss/*": ["models/*"],
+      "models/*": ["models/*"],
       "theme/*": ["theme/*"],
-      "Atoms/*": ["components/Atoms/*"],
-      "Organisms/*": ["components/Organisms/*"]
+      "atoms/*": ["components/atoms/*"],
+      "organisms/*": ["components/organisms/*"]
     } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     "typeRoots": [

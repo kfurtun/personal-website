@@ -50,6 +50,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-root-import`,
       options: {
         src: `${__dirname}/src`,
+        assets: `${__dirname}/src/assets`,
         components: `${__dirname}/src/components`,
         pages: `${__dirname}/src/pages`,
         models: `${__dirname}/src/models`,
@@ -57,9 +58,12 @@ const config: GatsbyConfig = {
         utils: `${__dirname}/src/utils`,
         atoms: `${__dirname}/src/components/atoms`,
         organisms: `${__dirname}/src/components/organisms`,
+        queries: `${__dirname}/src/components/queries`,
       },
     },
-    `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
 
