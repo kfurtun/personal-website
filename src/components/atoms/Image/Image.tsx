@@ -5,8 +5,9 @@ import { imageQuery } from './imageQuery';
 
 function Image({ src, alt, ...rest }: ImageProps): JSX.Element | null {
   const imageData: ImageQueryResult = imageQuery();
+
   const match = useMemo(
-    () => imageData.allFile.edges.find(({ node }) => src === node.relativePath),
+    () => imageData.images.edges.find(({ node }) => src === node.relativePath),
     [imageData, src]
   );
 

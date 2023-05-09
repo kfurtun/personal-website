@@ -4,8 +4,11 @@ import { InternalLink, ExternalLink } from 'components/atoms/Link';
 import { H1, H2, H3, P } from 'components/atoms/Typography';
 import Icon from 'components/atoms/Icon';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from 'src/components/atoms/Image';
+import { graphql } from 'gatsby';
+import { DataProps } from 'models/pages/homePage';
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   return (
     <>
       <InternalLink primary={true} text="resume" to="/" />
@@ -17,6 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <ExternalLink href="https://www.github.com">
         <Icon icon={faGithub} color="black1" fontSize={40} />
       </ExternalLink>
+      <Image src={data.allDataJson.edges[0].node.portrait} alt="zaa" />
     </>
   );
 };
@@ -24,3 +28,16 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => <title>Home Page</title>;
+
+export const query = graphql`
+  query HomePageQuery {
+    allDataJson {
+      edges {
+        node {
+          name
+          portrait
+        }
+      }
+    }
+  }
+`;
