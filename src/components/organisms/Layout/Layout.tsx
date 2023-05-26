@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from 'src/components/modelucles/Header';
 import GlobalStyles from 'src/theme/GlobalStyle';
 import styled from 'styled-components';
 
@@ -15,6 +16,7 @@ interface Props {
 function Layout({ children }: Props): JSX.Element {
   return (
     <>
+      <Header />
       <GlobalStyles />
       <Wrapper>{children}</Wrapper>
     </>

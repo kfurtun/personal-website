@@ -3,6 +3,7 @@ import { Theme } from 'src/models/theme';
 const theme: Theme = {
   colors: {
     blue1: '#4550FF',
+    blue2: '#5C94E8',
     white1: '#FFFFFF',
     white2: '#F3F6FF',
     black1: '#000000',

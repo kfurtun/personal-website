@@ -1,6 +1,7 @@
 [
   {
-    "name": "Kutay",
-    "portrait": "portrait.png"
+    "mainPage": {
+      "portrait": "portrait.png"
+    }
   }
 ]

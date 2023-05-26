@@ -2,4 +2,5 @@ export interface TypographyProps {
   fontSize?: number;
   color?: string;
   text: string;
+  className?: string;
 }

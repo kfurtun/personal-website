@@ -2,8 +2,7 @@ export type DataProps = {
   allDataJson: {
     edges: {
       node: {
-        name: string;
-        portrait: string;
+        mainPage: { header: { name: string; portrait: string; title: string } };
       };
     }[];
   };
