@@ -6,13 +6,15 @@ const text = 'test';
 
 describe('Internal link', () => {
   it('renders the correct link', () => {
-    const { getByRole } = render(<InternalLink to="/projects" text={text} />);
+    const { getByRole } = render(
+      <InternalLink to="/projects">{text}</InternalLink>
+    );
     const link = getByRole('link');
     expect(link).toHaveAttribute('href', '/projects');
   });
 
   it('should have the correct text content', () => {
-    const { getByText } = render(<InternalLink to="#" text={text} />);
+    const { getByText } = render(<InternalLink to="#">{text}</InternalLink>);
     const linkText = getByText(text);
     expect(linkText).toBeInTheDocument();
   });
