@@ -4,9 +4,9 @@ import {
   Wrapper,
   StyledInternalLink,
   NameContainer,
-  StyledH3,
+  Position,
+  Name,
 } from './Header.styles';
-import { H3 } from 'components/atoms/Typography';
 import Icon from 'components/atoms/Icon';
 import Navbar from 'components/modelucles/Navbar';
 import { HeaderData, HeaderProps, NavList } from 'models/molecules/header';
@@ -42,9 +42,9 @@ function Header(): JSX.Element {
       <StyledInternalLink to="/">
         <NameContainer>
           <Icon icon={faSquareFull} color="blue1" />
-          <H3 text={header.name} fontSize={24} />
+          <Name text={header.name} />
         </NameContainer>
-        <StyledH3 text={header.position} fontSize={18} />
+        <Position text={header.position} />
       </StyledInternalLink>
       <Navbar navList={navigation} />
     </Wrapper>
