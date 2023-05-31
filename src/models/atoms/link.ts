@@ -8,7 +8,6 @@ export interface ExternalLinkProps {
 }
 export interface InternalLinkProps {
   children: React.ReactNode;
-  primary?: boolean;
   to: string;
   className?: string;
   activeStyle?: ActiveStyle;

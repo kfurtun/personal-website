@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyledExternalLink } from 'components/atoms/Link/Link.styles';
 import { ExternalLinkProps } from 'src/models/atoms/link';
 
 function ExternalLink({
@@ -9,9 +8,9 @@ function ExternalLink({
   target,
 }: ExternalLinkProps) {
   return (
-    <StyledExternalLink href={href} className={className} target={target}>
+    <a href={href} className={className} target={target}>
       {children}
-    </StyledExternalLink>
+    </a>
   );
 }
 

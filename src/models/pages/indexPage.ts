@@ -1,8 +1,14 @@
+import { NameCard } from '../molecules/nameCard';
+import { Introduction } from '../molecules/intorduction';
+
 export type DataProps = {
   allDataJson: {
     edges: {
       node: {
-        indexPage: { nameCard: { portrait: string; alt: string } };
+        indexPage: {
+          nameCard: NameCard;
+          introduction: Introduction;
+        };
       };
     }[];
   };

@@ -55,6 +55,7 @@ export const NavbarWrapper = styled.div`
 
 export const MenuBar = styled.div<MenuBarProps>`
   display: ${({ state }) => (state !== 'closed' ? 'block' : 'none')};
+  z-index: 1;
 
   position: absolute;
   left: 0;

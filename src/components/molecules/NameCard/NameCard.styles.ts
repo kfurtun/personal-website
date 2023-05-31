@@ -1,7 +1,8 @@
 import { mediaQueries } from 'src/theme/mediaQueries';
 import { H2, H3 } from 'atoms/Typography';
-import pxToRem from 'src/theme/pxToRem';
+import pxToRem from 'theme/pxToRem';
 import styled from 'styled-components';
+import { StyledInternalLink as _StyledInternalLink } from 'molecules/Introduction/Introduction.styles';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -38,10 +39,15 @@ export const Name = styled(H2)`
 `;
 
 export const Title = styled(H3)`
+  display: none;
   text-transform: uppercase;
   font-size: ${pxToRem(18)};
   font-weight: 100;
   letter-spacing: ${pxToRem(2)};
+
+  ${mediaQueries.medium} {
+    display: block;
+  }
 `;
 
 export const Icons = styled.div`
@@ -66,10 +72,24 @@ export const NameTitleWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${pxToRem(20)};
-  margin-bottom: ${pxToRem(30)};
+  margin-bottom: ${pxToRem(10)};
+  width: 100%;
 
   ${mediaQueries.medium} {
     margin-bottom: ${pxToRem(40)};
     gap: ${pxToRem(30)};
   }
 `;
+
+export const LinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  ${mediaQueries.medium} {
+    display: none;
+  }
+`;
+
+export const StyledInternalLink = styled(_StyledInternalLink)``;

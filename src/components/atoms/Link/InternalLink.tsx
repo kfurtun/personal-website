@@ -4,18 +4,12 @@ import { InternalLinkProps } from 'src/models/atoms/link';
 
 function InternalLink({
   children,
-  primary,
   to,
   className,
   activeStyle,
-}: InternalLinkProps): JSX.Element {
+}: InternalLinkProps) {
   return (
-    <StyledInternalLink
-      primary={primary}
-      to={to}
-      className={className}
-      activeStyle={activeStyle}
-    >
+    <StyledInternalLink to={to} className={className} activeStyle={activeStyle}>
       {children}
     </StyledInternalLink>
   );

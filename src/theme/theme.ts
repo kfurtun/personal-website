@@ -11,11 +11,11 @@ const theme: Theme = {
     beige2: '#E6DACD',
   },
   fontSizes: {
-    h1: 100,
-    h2: 36,
-    h3: 24,
-    p: 16,
-    icon: 20,
+    h1: { medium: 40, large: 100 },
+    h2: { medium: 36, large: 36 },
+    h3: { medium: 18, large: 24 },
+    p: { medium: 16, large: 16 },
+    icon: { medium: 20, large: 20 },
   },
 };
 

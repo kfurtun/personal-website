@@ -3,6 +3,6 @@ export interface Theme {
     [key: string]: string;
   };
   fontSizes: {
-    [key: string]: number;
+    [key: string]: { [key: string]: number };
   };
 }

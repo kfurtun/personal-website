@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'atoms/Image';
 import Icon from 'atoms/Icon';
+import { NameCardProps } from 'models/molecules/nameCard';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -11,12 +12,14 @@ import {
   Icons,
   VerticalLine,
   NameTitleWrapper,
+  LinkWrapper,
+  StyledInternalLink,
 } from './NameCard.styles';
-import { ExternalLink } from 'src/components/atoms/Link';
+import { ExternalLink } from 'atoms/Link';
 
-function NameCard(props) {
-  console.log(props.data.portrait.src);
-  const { portrait, name, title } = props.data;
+function NameCard({ data }: NameCardProps) {
+  console.log(data.portrait.src);
+  const { portrait, name, title, buttons } = data;
 
   return (
     <Wrapper>
@@ -27,6 +30,13 @@ function NameCard(props) {
         <Name text={name} />
         <VerticalLine />
         <Title text={title} />
+        <LinkWrapper>
+          {buttons.map((button) => (
+            <StyledInternalLink to={button.path} primary={button.isPrimary}>
+              {button.text}
+            </StyledInternalLink>
+          ))}
+        </LinkWrapper>
       </NameTitleWrapper>
       <Icons>
         <ExternalLink
