@@ -1,12 +1,17 @@
 import React from 'react';
-import Header from 'src/components/modelucles/Header';
+import Header from 'src/components/molecules/Header';
 import GlobalStyles from 'src/theme/GlobalStyle';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  // font-family: ${({ theme }) => theme.fonts.body};
-  // color: ${({ theme }) => theme.colors.text};
-  // background-color: ${({ theme }) => theme.colors.background};
+  height: 100%;
+`;
+
+const LayoutWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 `;
 
 interface Props {
@@ -15,11 +20,11 @@ interface Props {
 
 function Layout({ children }: Props): JSX.Element {
   return (
-    <>
+    <LayoutWrapper>
       <Header />
       <GlobalStyles />
       <Wrapper>{children}</Wrapper>
-    </>
+    </LayoutWrapper>
   );
 }
 

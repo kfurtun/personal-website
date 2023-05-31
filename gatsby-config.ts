@@ -64,6 +64,7 @@ const config: GatsbyConfig = {
         theme: `${__dirname}/src/theme`,
         utils: `${__dirname}/src/utils`,
         atoms: `${__dirname}/src/components/atoms`,
+        molecules: `${__dirname}/src/components/molecules`,
         organisms: `${__dirname}/src/components/organisms`,
         queries: `${__dirname}/src/components/queries`,
       },

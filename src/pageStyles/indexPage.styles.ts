@@ -1,7 +1,20 @@
 import styled from 'styled-components';
 import { InternalLink } from 'components/atoms/Link';
 import pxToRem from 'src/theme/pxToRem';
+import { mediaQueries } from 'src/theme/mediaQueries';
 
+export const Wrapper = styled.main`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: ${({ theme }) =>
+    `linear-gradient(to left, ${theme.colors.white1} 60%, ${theme.colors.beige2} 40%)`};
+
+  ${mediaQueries.medium} {
+    // padding: ${pxToRem(100)};
+  }
+`;
 export const Header = styled.header`
   display: flex;
   align-items: center;

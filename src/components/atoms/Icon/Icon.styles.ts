@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import pxToRem from 'src/theme/pxToRem';
-import styled, { ThemeConsumer } from 'styled-components';
+import styled from 'styled-components';
 
 interface StyledIconProps {
   color: string;

@@ -1,7 +1,11 @@
 [
   {
-    "mainPage": {
-      "portrait": "portrait.png"
+    "indexPage": {
+      "nameCard": {
+        "portrait": { "src": "portrait.png", "alt": "Kutay Furtun portrait" },
+        "name": "Kutay Furtun",
+        "title": "Software Developer"
+      }
     }
   }
 ]

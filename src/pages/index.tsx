@@ -7,15 +7,20 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 import Image from 'src/components/atoms/Image';
 import { graphql } from 'gatsby';
-import { DataProps } from 'models/pages/homePage';
-import { Header, StyledInternalLink } from 'src/pageStyles/mainPage.styles';
+import { DataProps } from 'src/models/pages/indexPage';
+import {
+  Header,
+  StyledInternalLink,
+  Wrapper,
+} from 'src/pageStyles/indexPage.styles';
 import { queryNormalizer } from 'utils/queryNormalizer';
+import NameCard from 'molecules/NameCard';
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
-  const result = queryNormalizer(data, 'mainPage');
+  const indexPageData = queryNormalizer(data, 'indexPage');
 
   return (
-    <>
+    <Wrapper>
       {/* <InternalLink primary={true} text="resume" to="/" />
         <ExternalLink href="/">resume</ExternalLink>
         <H1 text="This is H1" />
@@ -25,8 +30,9 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
         <ExternalLink href="https://www.github.com">
           <Icon icon={faGithub} color="black1" fontSize={40} />
         </ExternalLink>
-        <Image src={data.allDataJson.edges[0].node.portrait} alt="zaa" /> */}
-    </>
+       <Image src={data.allDataJson.edges[0].node.portrait} alt="zaa" /> */}
+      <NameCard data={indexPageData.nameCard} />
+    </Wrapper>
   );
 };
 
@@ -35,12 +41,19 @@ export default IndexPage;
 export const Head: HeadFC = () => <title>Home Page</title>;
 
 export const query = graphql`
-  query HomePageQuery {
+  query IndexPageQuery {
     allDataJson {
       edges {
         node {
-          mainPage {
-            portrait
+          indexPage {
+            nameCard {
+              portrait {
+                src
+                alt
+              }
+              name
+              title
+            }
           }
         }
       }

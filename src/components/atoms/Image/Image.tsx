@@ -15,7 +15,14 @@ function Image({ src, alt, ...rest }: ImageProps): JSX.Element | null {
 
   const image = match.node.childImageSharp.gatsbyImageData;
 
-  return <GatsbyImage image={image} alt={alt} {...rest} />;
+  return (
+    <GatsbyImage
+      image={image}
+      alt={alt}
+      style={{ height: '100%', width: '100%' }}
+      {...rest}
+    />
+  );
 }
 
 export default Image;

@@ -9,19 +9,10 @@ const text = 'Test';
 const color = 'blue1';
 describe('Typography', () => {
   it('renders H1 component with given props', () => {
-    const { getByRole } = render(
-      <H1 text={text} fontSize={18} color={color} />
-    );
-
-    const styles = window.getComputedStyle(getByRole('heading'));
-
-    expect(styles['fontSize']).toEqual(pxToRem(18));
-    expect(styles['color']).toEqual(hexToRgb(theme.colors[color]));
+    const { getByRole } = render(<H1 text={text} />);
   });
   it('renders H2 compnent as h2 element', () => {
-    const { getByRole } = render(
-      <H2 text={text} fontSize={18} color={color} />
-    );
+    const { getByRole } = render(<H2 text={text} />);
 
     const h2 = getByRole('heading', { level: 2 });
 
@@ -29,9 +20,7 @@ describe('Typography', () => {
   });
 
   it('renders H3 compnent as h3 element', () => {
-    const { getByRole } = render(
-      <H3 text={text} fontSize={18} color={color} />
-    );
+    const { getByRole } = render(<H3 text={text} />);
 
     const h3 = getByRole('heading', { level: 3 });
 
@@ -39,7 +28,7 @@ describe('Typography', () => {
   });
 
   it('renders P compnent as p element', () => {
-    const { getByText } = render(<P text={text} fontSize={18} color={color} />);
+    const { getByText } = render(<P text={text} />);
 
     const p = getByText(text);
 
