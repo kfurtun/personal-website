@@ -24,10 +24,16 @@ function Navbar({ navList }: NavbarProps) {
 
   const onMenuBarButtonClick = () => {
     setMenuBarState(true);
+    // to avoid scrolling in mobile while MenuBar open
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
   };
 
   const onCloseButtonClick = () => {
     setMenuBarState(false);
+    // revert back if MenuBar closed
+    document.body.style.position = 'unset';
+    document.body.style.width = 'unset';
   };
 
   return (

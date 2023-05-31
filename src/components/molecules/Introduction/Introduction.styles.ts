@@ -69,19 +69,19 @@ export const StyledInternalLink = styled(InternalLink)<InternalLinkProps>`
     font-size: ${pxToRem(14)};
     width: ${pxToRem(130)};
     height: ${pxToRem(35)};
-  }
 
-  &:hover {
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in;
+    &:hover {
+      transition: background-color 0.5s ease-in-out, color 0.5s ease-in;
 
-    border: ${({ theme, primary }) => {
-      if (primary) return `${pxToRem(2)} solid ${theme.colors.blue1}`;
-      return 'none';
-    }};
+      border: ${({ theme, primary }) => {
+        if (primary) return `${pxToRem(2)} solid ${theme.colors.blue1}`;
+        return 'none';
+      }};
 
-    ${({ theme, primary }) => `
-  background:${primary ? theme.colors.white1 : theme.colors.blue1};
-  color:${primary ? theme.colors.black1 : theme.colors.white1}
-  `};
+      ${({ theme, primary }) => `
+      background:${primary ? theme.colors.white1 : theme.colors.blue1};
+      color:${primary ? theme.colors.black1 : theme.colors.white1}
+      `};
+    }
   }
 `;

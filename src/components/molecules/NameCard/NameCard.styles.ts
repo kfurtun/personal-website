@@ -84,11 +84,13 @@ export const NameTitleWrapper = styled.div`
 export const LinkWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: ${pxToRem(10)};
   width: 100%;
 
   ${mediaQueries.medium} {
     display: none;
+    justify-content: space-around;
   }
 `;
 

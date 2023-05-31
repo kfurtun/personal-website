@@ -8,7 +8,7 @@ import {
   Name,
 } from './Header.styles';
 import Icon from 'components/atoms/Icon';
-import Navbar from 'src/components/molecules/Navbar';
+import Navbar from 'components/molecules/Navbar';
 import { HeaderData, HeaderProps, NavList } from 'models/molecules/header';
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 
