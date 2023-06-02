@@ -11,6 +11,7 @@ export interface InternalLinkProps {
   to: string;
   className?: string;
   activeStyle?: ActiveStyle;
+  onClick?: () => void;
 }
 
 export interface ActiveStyle {

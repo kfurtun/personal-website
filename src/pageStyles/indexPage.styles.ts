@@ -8,15 +8,14 @@ export const Wrapper = styled.main`
   justify-content: flex-start;
   flex-direction: column;
   gap: ${pxToRem(30)};
-  height: 100%;
   background-image: ${({ theme }) =>
     `linear-gradient(to bottom, ${theme.colors.white1} 20%,${theme.colors.beige2} 20%, ${theme.colors.beige2} 80%)`};
   padding-bottom: 10%;
+  min-height: 100%;
 
   ${mediaQueries.medium} {
     flex-direction: row;
     justify-content: center;
-    height: 100%;
     background-image: ${({ theme }) =>
       `linear-gradient(to left, ${theme.colors.white1} 60%, ${theme.colors.beige2} 40%)`};
     padding-bottom: unset;

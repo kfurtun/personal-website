@@ -53,7 +53,12 @@ function Navbar({ navList }: NavbarProps) {
         </CloseButtonWrapper>
         <LinksWrapper>
           {navList.map((nav) => (
-            <StyledLink to={nav.path} key={nav.label} activeStyle={activeStyle}>
+            <StyledLink
+              to={nav.path}
+              key={nav.label}
+              activeStyle={activeStyle}
+              onClick={() => onCloseButtonClick()}
+            >
               {nav.label}
             </StyledLink>
           ))}

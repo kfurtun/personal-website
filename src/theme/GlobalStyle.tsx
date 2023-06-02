@@ -37,8 +37,10 @@ html, body, div, span, applet, object, iframe,
 
     body { min-height: 100vh}
 
-    button{
-       cursor:pointer;
-    }
+
+  p {
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
 
 `;

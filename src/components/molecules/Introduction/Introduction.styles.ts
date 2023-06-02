@@ -19,12 +19,7 @@ export const Wrapper = styled.div`
   ${mediaQueries.medium} {
     width: ${pxToRem(400)};
     height: ${pxToRem(526)};
-    padding: ${pxToRem(40)} ${pxToRem(20)};
-  }
-
-  p {
-    font-weight: 100;
-    letter-spacing: 1px;
+    padding: 0 ${pxToRem(20)};
   }
 `;
 

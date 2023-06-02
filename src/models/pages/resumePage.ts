@@ -8,8 +8,10 @@ export type DataProps = {
           title: string;
           experience: string;
           download: string;
+          resumePath: string;
           education: string;
           experiences: ExperienceBox[];
+          educations: ExperienceBox[];
         };
       };
     }[];

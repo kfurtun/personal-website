@@ -52,6 +52,14 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/data/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `files`,
+        path: `${__dirname}/src/assets/files`,
+        ignore: ['**/.*'],
+      },
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-root-import`,

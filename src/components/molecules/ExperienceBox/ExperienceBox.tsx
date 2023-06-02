@@ -16,8 +16,8 @@ function ExperienceBox({ data }: ExperienceBoxProps) {
     <Wrapper>
       <LeftContainer>
         <Date text={data.date} />
-        <Position text={data.position} />
-        <CompanyInfo text={data.company} />
+        <Position text={data.position || data.degree} />
+        <CompanyInfo text={data.company || data.school} />
         <CompanyInfo text={data.location} />
       </LeftContainer>
       <RightContainer>

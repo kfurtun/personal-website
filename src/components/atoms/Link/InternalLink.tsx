@@ -7,9 +7,15 @@ function InternalLink({
   to,
   className,
   activeStyle,
+  onClick,
 }: InternalLinkProps) {
   return (
-    <StyledInternalLink to={to} className={className} activeStyle={activeStyle}>
+    <StyledInternalLink
+      to={to}
+      className={className}
+      activeStyle={activeStyle}
+      onClick={onClick}
+    >
       {children}
     </StyledInternalLink>
   );
