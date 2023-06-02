@@ -1,3 +1,7 @@
+name: Clear GitHub Actions cache
+  run: |
+    echo "::set-env name=CLEAR_ACTIONS_CACHE::true"
+
 name: Deploy to GitHub Pages
 
 on:
