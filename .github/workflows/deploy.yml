@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Clear GitHub Actions cache
-        run: echo "::set-env name=CLEAR_ACTIONS_CACHE::true"
+        run: echo 'CLEAR_ACTIONS_CACHE=true'
 
       - name: Checkout repository
         uses: actions/checkout@v2
