@@ -37,7 +37,7 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width: ${pxToRem(280)};
+  width: ${pxToRem(320)};
   gap: ${pxToRem(40)};
 
   ${mediaQueries.medium} {
