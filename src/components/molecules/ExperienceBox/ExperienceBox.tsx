@@ -11,7 +11,6 @@ import {
 import { P } from 'atoms/Typography';
 
 function ExperienceBox({ data }: ExperienceBoxProps) {
-  console.log(data, 'zaa');
   return (
     <Wrapper>
       <LeftContainer>
