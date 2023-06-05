@@ -35,7 +35,9 @@ html, body, div, span, applet, object, iframe,
         display: block;
     }
 
-    body { min-height: 100vh}
+    body { min-height: 100vh;
+      overscroll-behavior-y:none;
+    }
 
 
   p {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import { graphql } from 'gatsby';
-import { DataProps } from 'src/models/pages/indexPage';
+import { DataProps } from 'models/pages/indexPage';
 import { Wrapper } from 'src/pageStyles/indexPage.styles';
 import { queryNormalizer } from 'utils/queryNormalizer';
 import NameCard from 'molecules/NameCard';
@@ -9,7 +9,7 @@ import Introduction from 'molecules/Introduction';
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   const indexPageData = queryNormalizer(data, 'indexPage');
-  console.log(indexPageData);
+
   return (
     <Wrapper>
       <NameCard data={indexPageData.nameCard} />

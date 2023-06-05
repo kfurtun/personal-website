@@ -38,7 +38,7 @@ const ResumePage: React.FC<PageProps<DataProps>> = ({ data }) => {
           </StyledDownloadLink>
         </ExperienceHeader>
         {resumePageData.experiences.map((experience) => (
-          <ExperienceBox data={experience} />
+          <ExperienceBox key={experience.date} data={experience} />
         ))}
       </HeaderWrapper>
       <HeaderWrapper>
@@ -46,7 +46,7 @@ const ResumePage: React.FC<PageProps<DataProps>> = ({ data }) => {
           <SectionHeader text={resumePageData.education} />
         </ExperienceHeader>
         {resumePageData.educations.map((education) => (
-          <ExperienceBox data={education} />
+          <ExperienceBox key={education.date} data={education} />
         ))}
       </HeaderWrapper>
       <PageUpButton />

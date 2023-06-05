@@ -18,7 +18,6 @@ import {
 import { ExternalLink } from 'atoms/Link';
 
 function NameCard({ data }: NameCardProps) {
-  console.log(data.portrait.src);
   const { portrait, name, title, buttons } = data;
 
   return (

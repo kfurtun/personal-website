@@ -8,7 +8,6 @@ const config: GatsbyConfig = {
       { label: 'About Me', path: '/' },
       { label: 'Resume', path: '/resume' },
       { label: 'Projects', path: '/projects' },
-      { label: 'Contact', path: '/contact' },
     ],
     header: { name: 'Kutay Furtun', position: 'Software Developer' },
   },
