@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   width: 100%;
   padding: ${pxToRem(30)};
   gap: ${pxToRem(20)};
+  box-shadow: -6px 6px 8px rgba(0, 0, 0, 0.2);
 
   ${mediaQueries.medium} {
     flex-direction: row;

@@ -20,6 +20,7 @@ function Image({ src, alt, ...rest }: ImageProps): JSX.Element | null {
       image={image}
       alt={alt}
       style={{ height: '100%', width: '100%' }}
+      imgStyle={{ height: '100%', width: '100%' }}
       {...rest}
     />
   );

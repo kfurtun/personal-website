@@ -24,9 +24,6 @@ export const TitleWrapper = styled.div`
   align-items: center;
   gap: ${pxToRem(6)};
   margin-top: ${pxToRem(30)};
-
-  ${mediaQueries.medium} {
-  }
 `;
 export const Title = styled(H1)`
   font-size: ${pxToRem(36)};

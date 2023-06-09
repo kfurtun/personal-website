@@ -19,7 +19,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-gtag',
-      options: { trackingIds: [] },
+      options: { trackingIds: ['G-Y442HE8S1D'] },
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',

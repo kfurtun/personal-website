@@ -24,7 +24,7 @@
       "education": "Education",
       "experiences": [
         {
-          "date": "May 2021-Present",
+          "date": "May 2022-Present",
           "position": "Junior Developer",
           "company": "Critical Mass",
           "location": "Calgary, AB (Remote)",
@@ -59,6 +59,45 @@
           "school": "Yildiz Technical University",
           "location": "Istanbul, Turkiye",
           "description": "I gained extensive knowledge and practical skills in ship design, structural analysis, and marine systems. This program honed my problem-solving abilities and critical thinking skills, which are valuable in software development. Working with complex design software and analyzing data sets prepared me for the technical aspects of software development.\n\nOverall, this program provided a solid engineering foundation and equipped me with the skills necessary to succeed in software development projects."
+        }
+      ]
+    },
+    "projectsPage": {
+      "title": "Projects",
+      "intro": "Here are my side projects besides working full time.",
+      "projects": [
+        {
+          "title": "Personal Website",
+          "type": "Individual Project",
+          "description": "My personal website serves as an online portfolio showcasing my skills, projects, and achievements. Built with Gatsby and Styled Components, it offers a seamless and optimized user experience. Leveraging the power of various Gatsby plugins, the website ensures fast loading times, SEO optimization, and markdown support. ",
+          "image": {
+            "img": "personal-website.png",
+            "alt": "Personal Website Screen Shot"
+          },
+          "link": "https://kutayfurtun.com/",
+          "github": "https://github.com/kfurtun/personal-website"
+        },
+        {
+          "title": "Fantasy Soccer League",
+          "type": "Individual Project",
+          "description": "The personal web development project utilized React, Express.js, and MongoDB. Developed as a final project, it showcased proficiency in full-stack web development with features such as dynamic user interfaces, seamless data flow, and user authentication. Although unpublished, the project served as a valuable learning experience, strengthening skills in modern web technologies. ",
+          "image": {
+            "img": "",
+            "alt": ""
+          },
+          "link": "",
+          "github": "https://github.com/kfurtun/fantasy-soccer-league"
+        },
+        {
+          "title": "Wearables E-commerce Platform",
+          "type": "Group Project",
+          "description": "The group project was a collaborative endeavor that utilized React, Express.js, and MongoDB technologies. Using Git and GitHub for source control, the team worked together to develop a web application with a robust user interface, seamless data flow, and efficient data storage and retrieval. Despite not being published, the project demonstrated the collective proficiency of the team in these technologies, as well as effective collaboration and version control practices in a group setting. ",
+          "image": {
+            "img": "wearables.png",
+            "alt": ""
+          },
+          "link": "",
+          "github": "https://github.com/kfurtun/wearables-ecommerce-platform"
         }
       ]
     }

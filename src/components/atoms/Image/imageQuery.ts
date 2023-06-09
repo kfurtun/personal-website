@@ -12,7 +12,7 @@ export const imageQuery = (): ImageQueryResult =>
             relativePath
             childImageSharp {
               gatsbyImageData(
-                layout: CONSTRAINED
+                layout: FULL_WIDTH
                 placeholder: DOMINANT_COLOR
                 formats: [AUTO, WEBP]
                 quality: 100
