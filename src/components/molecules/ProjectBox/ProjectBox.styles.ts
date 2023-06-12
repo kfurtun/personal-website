@@ -90,11 +90,13 @@ export const RightContainer = styled.div`
   position: relative;
   overflow: hidden;
   border-top: 1px solid ${({ theme }) => theme.colors.blue1};
+  display: none;
 
   ${mediaQueries.medium} {
     border-left: 1px solid ${({ theme }) => theme.colors.blue1};
     border-top: none;
     min-height: ${pxToRem(500)};
+    display: block;
 
     div:first-child {
       position: absolute;

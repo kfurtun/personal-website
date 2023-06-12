@@ -30,7 +30,7 @@ const ProjectsPage: React.FC<PageProps<DataProps>> = ({ data }) => {
           <P text={projectsPageData.intro} />
         </Intro>
         {projectsPageData.projects.map((project) => (
-          <ProjectBox data={project} />
+          <ProjectBox key={project.github} data={project} />
         ))}
       </Container>
       <PageUpButton />
