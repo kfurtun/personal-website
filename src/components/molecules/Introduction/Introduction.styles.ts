@@ -64,6 +64,7 @@ export const StyledInternalLink = styled(InternalLink)<InternalLinkProps>`
     font-size: ${pxToRem(14)};
     width: ${pxToRem(130)};
     height: ${pxToRem(35)};
+    transition: color 0.3s ease-in, background-color 0.3s ease-in;
 
     &:hover {
       transition: background-color 0.5s ease-in-out, color 0.5s ease-in;

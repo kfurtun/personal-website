@@ -64,7 +64,7 @@ export const StyledDownloadLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
   border: none;
 
   ${({ theme }) => `
