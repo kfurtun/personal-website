@@ -9,6 +9,7 @@ import {
   ImageWrapper,
   Name,
   Title,
+  Location,
   Icons,
   VerticalLine,
   NameTitleWrapper,
@@ -29,6 +30,7 @@ function NameCard({ data }: NameCardProps) {
         <Name text={name} />
         <VerticalLine />
         <Title text={title} />
+        <Location text="Vancouver, BC" />
         <LinkWrapper>
           {buttons.map((button) => (
             <StyledInternalLink to={button.path} primary={button.isPrimary}>

@@ -50,6 +50,11 @@ export const Title = styled(H3)`
   }
 `;
 
+export const Location = styled(Title)`
+  font-size: ${pxToRem(16)};
+  text-transform: unset;
+`;
+
 export const Icons = styled.div`
   width: 100%;
   height: ${pxToRem(54)};
@@ -76,7 +81,6 @@ export const NameTitleWrapper = styled.div`
   width: 100%;
 
   ${mediaQueries.medium} {
-    margin-bottom: ${pxToRem(40)};
     gap: ${pxToRem(30)};
   }
 `;
