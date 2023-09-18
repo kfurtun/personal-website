@@ -6,6 +6,7 @@ export interface NameCard {
   portrait: Portrait;
   name: string;
   title: string;
+  location: string;
   buttons: Buttons[];
 }
 

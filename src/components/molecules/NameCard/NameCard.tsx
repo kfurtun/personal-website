@@ -19,7 +19,7 @@ import {
 import { ExternalLink } from 'atoms/Link';
 
 function NameCard({ data }: NameCardProps) {
-  const { portrait, name, title, buttons } = data;
+  const { portrait, name, title, buttons, location } = data;
 
   return (
     <Wrapper>
@@ -30,7 +30,7 @@ function NameCard({ data }: NameCardProps) {
         <Name text={name} />
         <VerticalLine />
         <Title text={title} />
-        <Location text="Vancouver, BC" />
+        <Location text={location} />
         <LinkWrapper>
           {buttons.map((button) => (
             <StyledInternalLink to={button.path} primary={button.isPrimary}>

@@ -40,6 +40,7 @@ export const query = graphql`
               }
               name
               title
+              location
               buttons {
                 text
                 path

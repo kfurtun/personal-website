@@ -5,6 +5,7 @@
         "portrait": { "src": "portrait.png", "alt": "Kutay Furtun portrait" },
         "name": "Kutay Furtun",
         "title": "Software Developer",
+        "location": "Vancouver, BC",
         "buttons": [
           { "text": "resume", "path": "/resume", "isPrimary": true },
           { "text": "projects", "path": "/projects", "isPrimary": false }
